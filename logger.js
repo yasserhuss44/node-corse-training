@@ -1,9 +1,20 @@
-var url ="http://yasserlogger.io/log"
+const EventEmitter = require('events');
 
-function log(message)
-{
-    console.log(message) ;    
+var url = "http://yasserlogger.io/log"
+
+// function log(message) {
+//     console.log(message);
+// }
+
+
+// module.exports.log = log;
+
+class Logger extends EventEmitter {
+
+    log(args) {
+        console.log(message);
+        this.emit('MessageLogged', message);
+    }
 }
 
-
-module.exports.log=log;
+module.exports.Logger = Logger;
