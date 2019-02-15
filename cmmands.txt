@@ -1,0 +1,50 @@
+#NPM
+npm init 
+
+npm init --yes
+
+npm i jshint --save-dev   used to install development package
+
+npm i -g npm
+
+npm i -g npm-check-updates
+
+npm view [package]   ex: npm view mongoose 
+
+npm view mongoose dependencies
+
+npm view mongoose versions
+
+npm list --depth=0
+
+npm outdated
+
+npm -g outdated
+
+npm update
+
+ncu -u    update versions 
+
+nm un -g [package]
+
+npm uninstall [package]= npm un [package]
+
+npm login 
+
+npm publish 
+
+npm version major
+
+npm version minor
+
+npm version patch
+
+#Useful Packages
+jshint
+underscore
+lodash
+mongooshe
+firebase-tools
+webpack
+@angular/cli
+create-react-app
