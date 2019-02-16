@@ -84,3 +84,45 @@ function myLoop() {           //  create a loop function
 
 
 
+
+
+
+
+
+
+
+
+// const http =require('http');
+
+
+// const server =http.createServer((req,resp)=>{
+//     console.log(req) ;
+//     resp.write('Hello World') ;
+//     resp.end();
+// });
+
+// server.listen(3200,function(){
+//     console.log('Listining on Port 3200');
+// }) ;
+
+const http = require('http');
+const fs = require('fs');
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, resp) => {
+    const videoUrl = req.query.videoUrl;
+
+
+    const file = fs.createWriteStream("file.mp4");
+    const request = http.get(videoUrl, function (response) {
+        response.pipe(file);
+    });
+    console.log(videoUrl);
+    resp.send('Hello World');
+});
+
+app.listen(3200, () => {
+    console.log('listining on port 3200');
+});
