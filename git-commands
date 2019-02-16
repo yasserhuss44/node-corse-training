@@ -1,0 +1,12 @@
+git status
+
+git init 
+
+git add --all . 
+
+git remote add origin 'http://'
+
+git commit -m 'Initial Commit'
+
+git push -u origin master
+

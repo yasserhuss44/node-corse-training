@@ -43,11 +43,11 @@ emitter.on('MessageWithArg', function (e) {
 emitter.emit('MessageWithArg', { Id: 5, Name: 'Yasser' });
 
 
-const Logger= require('./logger');
-const logger= new Logger() ;
+const Logger = require('./logger');
+const logger = new Logger();
 
-logger.on('MessageLoged',(args)=>{
-    console.log('Log Event Recieved',args) ;
+logger.on('MessageLoged', (args) => {
+    console.log('Log Event Recieved', args);
 })
 
-logger.log('Log Yasser') ;
+logger.log('Log Yasser');
